@@ -1,20 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function make_album(artist_name, album_title, tracks) {
-    let album = {
-        artist: artist_name,
-        title: album_title,
-    };
-    if (tracks != undefined) {
-        album.tracks = tracks;
-    }
-    return album;
+function CITY_COUNTRY(CITY, COUNTRY) {
+    return `${CITY},${COUNTRY}`;
 }
-//CALLING THREE FUNCTIONS WITH DIFFERENT VALUES
-let album1 = make_album("SAIRA", "Album title 1");
-let album2 = make_album("SAWAIRA", "Album title 2");
-let album3 = make_album("AZRA", "Album title 3", 10);
-//PRINTING VALUES OF OUR OBJECT CREATED MY FUNCTION
-console.log(album1);
-console.log(album2);
-console.log(album3);
+//CALLING A FUNCTION AND PRINTING THE RETURNED VALUE
+console.log(CITY_COUNTRY("KARACHI", "PAKISTAN"));
+console.log(CITY_COUNTRY("TOKYO", "JAPAN"));
+console.log(CITY_COUNTRY("BERLIN", "GERMANY"));
