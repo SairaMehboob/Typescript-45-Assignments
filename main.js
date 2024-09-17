@@ -1,10 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-//DEFINING A FUNCTION TO PRINT EACH MAGICIAN'S NAME
-function show_magicians(magicians) {
-    magicians.forEach(name => console.log(name));
+function make_album(artist_name, album_title, tracks) {
+    let album = {
+        artist: artist_name,
+        title: album_title,
+    };
+    if (tracks != undefined) {
+        album.tracks = tracks;
+    }
+    return album;
 }
-//DEFINING AN ARRAY CONTAINING MAGICIANS NAME
-let magician_names = ["HARRY POTTER", "DAVID", "HARRY HOUDINI", "DOUG HENNING"];
-//CALLING THE FUNCTION TO PINT EACH MAGICIAN'S NAME
-show_magicians(magician_names);
+//CALLING THREE FUNCTIONS WITH DIFFERENT VALUES
+let album1 = make_album("SAIRA", "Album title 1");
+let album2 = make_album("SAWAIRA", "Album title 2");
+let album3 = make_album("AZRA", "Album title 3", 10);
+//PRINTING VALUES OF OUR OBJECT CREATED MY FUNCTION
+console.log(album1);
+console.log(album2);
+console.log(album3);
