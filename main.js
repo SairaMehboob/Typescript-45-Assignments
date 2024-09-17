@@ -1,27 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-//CREATING AN ARRAY 
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-//USING FOR-LOOP
-for (let oneNumber of numbers) {
-    let ordinalEnding;
-    if (oneNumber === 1) {
-        ordinalEnding = "st";
-    }
-    else if (oneNumber === 2) {
-        ordinalEnding = "nd";
-    }
-    else if (oneNumber === 3) {
-        ordinalEnding = "rd";
-    }
-    else if (oneNumber === 4) {
-        ordinalEnding = "th";
-    }
-    else if (oneNumber === 5) {
-        ordinalEnding = "th";
+//MAKING ARRAY OF CURRENT USERS
+let current_Users = ["SOHA", "MARIAM", "MUNAZZA", "FARWAH", "MARAL"];
+//MAKING ARRAY OF NEW USERS
+let new_Users = ["IFRA", "IMAMA", "MALIHA", "ROHA", "MAHAM"];
+//LOOP TROUG NEW_USERS TO CHECK FOR USERNAMES AVAILABILITY
+new_Users.forEach(new_One_User => {
+    let our_Condition = current_Users.some(current_One_User => current_One_User.toLowerCase() === new_One_User.toLowerCase());
+    if (our_Condition) {
+        console.log(`SORRY! ${new_One_User}IS ALREADY TAKEN!`);
     }
     else {
-        ordinalEnding = "th";
+        console.log(`THe USERNAME ${new_One_User} IS AVAILABLE`);
     }
-    console.log(`${oneNumber}${ordinalEnding}`);
-}
+});
