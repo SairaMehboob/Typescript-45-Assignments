@@ -1,16 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-//MAKING ARRAY OF CURRENT USERS
-let current_Users = ["SOHA", "MARIAM", "MUNAZZA", "FARWAH", "MARAL"];
-//MAKING ARRAY OF NEW USERS
-let new_Users = ["IFRA", "IMAMA", "MALIHA", "ROHA", "MAHAM"];
-//LOOP TROUG NEW_USERS TO CHECK FOR USERNAMES AVAILABILITY
-new_Users.forEach(new_One_User => {
-    let our_Condition = current_Users.some(current_One_User => current_One_User.toLowerCase() === new_One_User.toLowerCase());
-    if (our_Condition) {
-        console.log(`SORRY! ${new_One_User}IS ALREADY TAKEN!`);
-    }
-    else {
-        console.log(`THe USERNAME ${new_One_User} IS AVAILABLE`);
-    }
-});
+let userNames = ["MARIA", "ADEEBA", "ADMIN", "SADIA", "NAZIA"];
+if (userNames.length === 0) {
+    console.log("YOUR ARRAY IS EMPTY! WE NEED TO FIND SOME USERS.");
+}
+else {
+    userNames.forEach(oneUser => {
+        if (oneUser === "ADMIN") {
+            console.log(`HELLO! ${oneUser}, WOULD YOU LIKE TO SEE THE STATUS REPORT?`);
+        }
+        else {
+            console.log(`HELLO! ${oneUser},THANKYOU FOR LOGGING IN AGAIN.`);
+        }
+    });
+}
